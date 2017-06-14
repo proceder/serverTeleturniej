@@ -34,7 +34,6 @@ class ClientThread(threading.Thread):
         else:
             self.name = 'Gosc'
 
-        print "zmiana"
         self.connection.sendall("Ile pytan chcesz?")
         data = self.connection.recv(1024)
         print self.getName() + "wybral: " + data
